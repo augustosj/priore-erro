@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Perfil</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  
+  <!-- FOTO -->
+  <ion-card>
+    <img src="img/pp.jpg" >
+  </ion-card>
+
+  <!-- NOME -->
+  <ion-card>
+    <ion-card-header>
+      Nome
+    </ion-card-header>
+    <div>
+      <ion-card-content>
+        {{ user.name }}
+      </ion-card-content>
+      <ion-icon name='brush'></ion-icon>  
+    </div>
+    
+  </ion-card>
+
+  <!-- EMAIL -->
+  <ion-card>
+    <ion-card-header>
+      E-mail
+    </ion-card-header>
+    <ion-card-content>
+      {{ user.email }}
+    </ion-card-content>
+    <ion-icon name='brush'></ion-icon>  
+  </ion-card>
+
+  <!-- INSTITUIAO -->
+  <ion-card>
+    <ion-card-header>
+      Instituição
+    </ion-card-header>
+    <ion-card-content>
+      {{ user.instituicao }}
+    </ion-card-content>
+    <ion-icon name='brush'></ion-icon>  
+  </ion-card>
+  
+  
+  <!-- CURSO E TURMA -->
+  <ion-card>
+    <ion-card-header>
+      Turma
+    </ion-card-header>
+    <ion-card-content>
+      {{ user.turma }} do {{ user.curso }}
+    </ion-card-content>
+    <ion-icon name='brush'></ion-icon>  
+  </ion-card>
+
+
+</ion-content>

@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Calendário</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  
+  <ion-list *ngIf="pFeito || pHoje || pAmanha || pPSemana || pPMes">
+    <ion-list-header *ngIf=" pFeito " >Atrasadas</ion-list-header>
+    <!-- ion-item >Terminator II</ion-item-->
+
+    <ion-list-header *ngIf=" pHoje ">Para hoje</ion-list-header>
+    <ion-item (tap)="pressEvent($event)">Lista de revisão</ion-item>
+    <ion-item (tap)="pressEvent($event)">Atividades no Portal</ion-item>
+
+    <ion-list-header *ngIf=" pAmanha " >Para amanhã</ion-list-header>
+    <!--ion-item>lallalala</ion-item -->
+
+    <ion-list-header *ngIf=" pPSemana " >Para a proxima semana</ion-list-header>
+    <!--ion-item>lallalala</ion-item -->
+
+    <ion-list-header *ngIf=" pPMes " >Para o proximo mês</ion-list-header>
+    <!--ion-item>lallalala</ion-item -->
+  </ion-list>
+
+  <!-- PARA QUANDO NÃO HOUVER TAREFAS -->
+  <ion-list *ngIf="pFeito == false && pHoje == false && pAmanha == false && pPSemana == false && pPMes == false">
+    <ion-list-header  >Não há tarefas</ion-list-header>
+  </ion-list>
+  
+  <!-- FAB -->
+  <ion-fab right bottom>
+    <button ion-fab (click)="onFabClicked()">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
+
+</ion-content>

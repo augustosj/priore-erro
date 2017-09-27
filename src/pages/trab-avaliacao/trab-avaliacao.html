@@ -1,0 +1,39 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Trabalhos e Avaliações</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+  
+  <ion-list *ngIf="pFeito || pHoje || pAmanha || pPSemana || pPMes">
+    
+    <ion-list-header *ngIf=" pHoje ">Para hoje</ion-list-header>
+    <!-- ion-item>Laallalala</ion-item-->
+
+    <ion-list-header *ngIf=" pAmanha " >Para amanhã</ion-list-header>
+    <!--ion-item>lallalala</ion-item -->
+
+    <ion-list-header *ngIf=" pPSemana " >Para a proxima semana</ion-list-header>
+    <!--ion-item>lallalala</ion-item -->
+
+    <ion-list-header *ngIf=" pPMes " >Para o proximo mês</ion-list-header>
+    <!--ion-item>lallalala</ion-item -->
+  </ion-list>
+  
+  <!-- PARA QUANDO NÃO HOUVER TAREFAS -->
+  <ion-item *ngIf="pFeito == false && pHoje == false && pAmanha == false && pPSemana == false && pPMes == false" >Não há tarefas</ion-item>
+
+  <!-- FAB -->
+  <ion-fab right bottom>
+    <button ion-fab>
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
+
+</ion-content>
