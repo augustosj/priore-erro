@@ -39,7 +39,7 @@ export class MyApp {
       { title: 'Calendário e Eventos', component: CalendarioPage },
       { title: 'Trabalhos e Avaliações', component: TrabAvaliacao },
       { title: 'Perfil', component: PerfilPage},
-      { title: 'Configurações', component: ConfiguracaoPage },
+      { title: 'Configurações', component: ConfiguracaoPage }
     ];
 
   }
